@@ -177,6 +177,7 @@
   cursor: pointer;
   font-size: 14px;
   gap: 6px;
+  margin-top: -2px;
 }
 .modal .form_bottom .custom_checkbox_input {
   display: none;
