@@ -317,95 +317,116 @@ if (document.readyState === "loading") {
 
 window.initSMBFooter = initSMBFooter;
 // bu kodlarni Men yozyapman Asadbek Qulboyev
-$(function(){
+$(document).ready(function () {
+  // Telefon mask (agar inputmask ulangan bo‘lsa)
+  if ($.fn.inputmask) {
+    $("#phone").inputmask("+7 (999) 999-99-99");
+  }
 
-  // Telefon → SMS
-  $(".btn_phone_next").on("click", function(e){
-    e.preventDefault();
-    $(".step_phone").fadeOut(200, function(){
-      $(".step_sms").fadeIn(200);
-    });
-  });
-
-  // SMS → Назад (telefon)
-  $(".btn_back_phone").on("click", function(e){
-    e.preventDefault();
-    $(".step_sms").fadeOut(200, function(){
-      $(".step_phone").fadeIn(200);
-    });
-  });
-
-  // Telefon → Email
-  $(".btn_email_next").on("click", function(e){
-    e.preventDefault();
-    $(".step_phone").fadeOut(200, function(){
-      $(".step_email").fadeIn(200);
-    });
-  });
-
-  // Email → Назад (telefon)
-  $(".btn_back_email").on("click", function(e){
-    e.preventDefault();
-    $(".step_email").fadeOut(200, function(){
-      $(".step_phone").fadeIn(200);
-    });
-  });
-
-  // SMS xato → Error
-  $(".btn_sms_wrong").on("click", function(e){
-    e.preventDefault();
-    $(".step_sms").fadeOut(200, function(){
-      $(".step_error").fadeIn(200);
-    });
-  });
-
-  // Error → Назад (telefon)
-  $(".btn_back_error").on("click", function(e){
-    e.preventDefault();
-    $(".step_error").fadeOut(200, function(){
-      $(".step_phone").fadeIn(200);
-    });
-  });
-
-  // ✅ SMS input nav
-  $(".sms_inputs input").on("input", function() {
-    if (this.value.length === 1) {
-      $(this).next("input").focus();
-    }
-  });
-  $(".sms_inputs input").on("keydown", function(e) {
-    if (e.key === "Backspace" && this.value === "") {
-      $(this).prev("input").focus();
-    }
-  });
-
-  // ✅ Telefon + checkbox validatsiya
+  // Telefon formani tekshirish
   function validatePhoneForm() {
-    let phoneFilled = $("#phone").val().trim().length > 0;
+    let phoneVal = $("#phone").val().trim();
+    let phoneValid = /^\+7\s?\(\d{3}\)\s?\d{3}-\d{2}-\d{2}$/.test(phoneVal);
     let checkboxChecked = $(".custom_checkbox_input").is(":checked");
 
-    if (phoneFilled && checkboxChecked) {
+    if (phoneValid && checkboxChecked) {
       $(".btn_phone_next").prop("disabled", false);
     } else {
       $(".btn_phone_next").prop("disabled", true);
     }
   }
 
-  // Telefon input o‘zgarganda
-  $("#phone").on("input", function() {
-    validatePhoneForm();
+  $("#phone").on("input", validatePhoneForm);
+  $(".custom_checkbox_input").on("change", validatePhoneForm);
+
+  // Telefon → SMS
+  $(document).on("click", ".btn_phone_next", function (e) {
+    e.preventDefault();
+    if ($(this).is(":disabled")) return;
+    $(".step_phone").fadeOut(200, function () {
+      $(".step_sms").fadeIn(200);
+    });
   });
 
-  // Checkbox o‘zgarganda
-  $(".custom_checkbox_input").on("change", function() {
-    validatePhoneForm();
+  // SMS → Назад
+  $(document).on("click", ".btn_back_phone", function (e) {
+    e.preventDefault();
+    $(".step_sms").fadeOut(200, function () {
+      $(".step_phone").fadeIn(200);
+    });
   });
 
-  $("input[type='tel']").inputmask("+7 (999) 999-99-99");
-  $('.profile-btn').click(function(){
-    $('.modal').fadeIn();
-  })
-  $('.exit').on('click', function(){
-    $('.modal').fadeOut();
+  // Telefon → Email
+  $(document).on("click", ".modal_link", function (e) {
+    e.preventDefault();
+    $(".step_phone").fadeOut(200, function () {
+      $(".step_email").fadeIn(200);
+    });
   });
+
+  // Email → Назад
+  $(document).on("click", ".btn_back_email", function (e) {
+    e.preventDefault();
+    $(".step_email").fadeOut(200, function () {
+      $(".step_phone").fadeIn(200);
+    });
+  });
+
+  // SMS → Error
+  $(document).on("click", ".btn_sms_wrong", function (e) {
+    e.preventDefault();
+    $(".step_sms").fadeOut(200, function () {
+      $(".step_error").fadeIn(200);
+    });
+  });
+
+  // Error → Назад
+  $(document).on("click", ".btn_back_error", function (e) {
+    e.preventDefault();
+    $(".step_error").fadeOut(200, function () {
+      $(".step_phone").fadeIn(200);
+    });
+  });
+
+  // SMS input nav
+  $(document).on("input", ".sms_inputs input", function () {
+    this.value = this.value.replace(/[^0-9]/g, "");
+    if (this.value.length === 1) {
+      $(this).next("input").focus();
+    }
+  });
+
+  $(document).on("keydown", ".sms_inputs input", function (e) {
+    if (e.key === "Backspace" && this.value === "") {
+      $(this).prev("input").focus();
+    }
+  });
+
+  // Boshlanishida tugma disable bo‘lsin
+  validatePhoneForm();
+});
+
+$(".eye").click(function () {
+  if ($(this).hasClass("active")) {
+    $(this).removeClass("active");
+    $(this).prev().attr("type", "password");
+  } else {
+    $(this).addClass("active");
+    $(this).prev().attr("type", "text");
+  }
+});
+$(".modal_bottom_text .modal_login").click(function () {
+  $(".modal#login").fadeIn();
+  $(".modal#registerModal").fadeOut();
+});
+$(".modal_bottom_text .modal_register").click(function () {
+  $(".modal#login").fadeOut();
+  $(".modal#registerModal").fadeIn();
+});
+$("input[type='tel']").inputmask("+7 (999) 999-99-99");
+$(".profile-btn").click(function () {
+  $(".modal#login").fadeIn();
+});
+$(".exit").on("click", function () {
+  $(".modal").fadeOut();
 });
