@@ -202,62 +202,97 @@
         <!-- Mobile Menu Overlay -->
         <div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="toggleMobileMenu()"></div>
 
-        <!-- Hero Slider -->
-        <section class="hero-slider">
-            <div class="swiper heroSwiper">
-                <div class="swiper-wrapper">
-                    <!-- Slide 1 - Brown Bag -->
-                    <div class="swiper-slide brown-slide" style="background: url(assets/images/header_hero-bg1.png);background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;">
-                        <div class="container">
-                            <div class="row align-items-center min-vh-100">
-                                <div class="col-12">
-                                    <div class="slide-content">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- profile -->
 
-                    <!-- Slide 2 - Pink Bag -->
-                    <div class="swiper-slide pink-slide" style="background: url(assets/images/header_hero-bg2.jpg);background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;">
-                        <div class="container">
-                            <div class="row align-items-center min-vh-100">
-                                <div class="col-12">
-                                    <div class="slide-content">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3 - Lifestyle -->
-                    <div class="swiper-slide lifestyle-slide" style="background: url(assets/images/header_hero-bg1.png);background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;">
-                        <div class="container">
-                            <div class="row align-items-center min-vh-100">
-                                <div class="col-12">
-                                    <div class="slide-content">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <section class="profile">
+            <aside class="profile__sidebar">
+                <div class="profile__user">
+                    <div class="profile__avatar">SMB</div>
+                    <div class="profile__info">
+                        <p class="profile__hello">Привет! Рады встрече</p>
+                        <p class="profile__bonus">Твои бонусы: <span>150</span></p>
                     </div>
                 </div>
+                <ul class="profile__menu">
+                    <li><a href="#">Заказы</a></li>
+                    <li><a href="#">Избранные</a></li>
+                    <li><a href="#">Бонусы</a></li>
+                    <li><a href="#">Подарочные карты</a></li>
+                    <li><a href="#">Контактная информация</a></li>
+                    <li><a href="#">Пароль и безопасность</a></li>
+                    <li class="logout"><a href="#">Выйти</a></li>
+                </ul>
+            </aside>
 
-                <!-- Navigation -->
-                <div class="swiper-button-next">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="fas fa-chevron-left"></i>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
+            <main class="profile__content">
+                <h3 class="section_title">Контактные данные</h3>
+                <form class="profile__form">
+                    <label class="form__row">
+                        <span class="input_title">Имя*</span>
+                        <input type="text" value="Ольга">
+                    </label>
+                    <label class="form__row">
+                        <span class="input_title">Фамилия*</span>
+                        <input type="text" value="Иванова">
+                    </label>
+                    <label class="form__row">
+                        <span class="input_title">Отчество*</span>
+                        <input type="text" placeholder="Введите данные">
+                    </label>
+                    <label class="form__row">
+                        <span class="input_title">Дата рождения*</span>
+                        <input type="text" placeholder="Введите данные">
+                    </label>
+                    <label class="form__row">
+                        <span class="input_title">Телефон*</span>
+                        <input type="text" value="+7 (199)000-00-00">
+                    </label>
+                    <label class="form__row">
+                        <span class="input_title">E-mail*</span>
+                        <input type="email" value="user12345@gmail.com">
+                    </label>
+
+                    <h3 class="section_title">Мой адрес</h3>
+                    <label class="form__row w50">
+                        <span class="input_title">Город*</span>
+                        <input type="text" value="Москва">
+                    </label>
+                    <label class="form__row w50">
+                        <span class="input_title">Адрес доставки*</span>
+                        <input type="text" value="ул. Максима Горького">
+                    </label>
+                    <label class="form__row w20">
+                        <span class="input_title">Индекс*</span>
+                        <input type="text" value="234 567">
+                    </label>
+                    <label class="form__row w20">
+                        <span class="input_title">Номер квартиры*</span>
+                        <input type="text" value="34">
+                    </label>
+                    <label class="form__row w20">
+                        <span class="input_title">Номер подъезда*</span>
+                        <input type="text" placeholder="Введите данные">
+                    </label>
+                    <label class="form__row w20">
+                        <span class="input_title">Этаж*</span>
+                        <input type="text" placeholder="Введите данные">
+                    </label>
+
+                    <label class="form__checkbox">
+                        <span class="custom_checkbox">
+                            <input type="checkbox" class="custom_checkbox_input" name="checkbox" />
+                            <span class="custom_checkbox_box"></span>
+                        </span>
+                        <p>
+                            Нажимая «Получить код», я принимаю условия Пользовательского соглашения <br>
+                            и даю <a href="#">Согласие на обработку персональных данных</a> в соответствии с <a
+                                href="#">Политикой <br> конфиденциальности</a>
+                        </p>
+                    </label>
+
+                    <button type="submit" class="btn">Сохранить данные</button>
+                </form>
+            </main>
         </section>
 
         <!-- Cookie Popup -->
@@ -279,361 +314,6 @@
 
         <!-- Popup Overlays -->
         <div class="popup-overlay" id="popupOverlay"></div>
-        <!-- =================================================header end========================================== -->
-        <section class="collection-section">
-            <div class="container">
-                <h2 class="section-title">NEW COLLECTION</h2>
-
-                <div class="products-grid">
-                    <!-- Product 1 -->
-                    <div class="product-card">
-                        <a href="#" class="product-image">
-                            <img src="assets/images/section_bg-bag1.png" alt="Mini Rosa Handbag">
-                        </a>
-                        <div class="heart-icon" onclick="toggleHeart(this)">
-                            <svg viewBox="0 0 24 24">
-                                <path
-                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                            </svg>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-brand">MINI ROSA</div>
-                            <div class="product-price">29 000 ₽</div>
-                            <div class="color-options">
-                                <span class="color-option" style="background-color: #5E4F37;"></span>
-                                <span class="color-option" style="background-color: #A86738;"></span>
-                                <span class="color-option" style="background-color: #000000;"></span>
-                                <span class="color-option" style="background-color: #DEDEDE;"></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Product 2 -->
-                    <div class="product-card">
-                        <a href="#" class="product-image">
-                            <img src="assets/images/section_bg-bag2.png" alt="Mini Rosa Handbag Black">
-                        </a>
-                        <div class="heart-icon" onclick="toggleHeart(this)">
-                            <svg viewBox="0 0 24 24">
-                                <path
-                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                            </svg>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-brand">MINI ROSA</div>
-                            <div class="product-price">29 000 ₽</div>
-                            <div class="color-options">
-                                <span class="color-option" style="background-color: #5E4F37;"></span>
-                                <span class="color-option" style="background-color: #A86738;"></span>
-                                <span class="color-option" style="background-color: #000000;"></span>
-                                <span class="color-option" style="background-color: #DEDEDE;"></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Product 3 -->
-                    <div class="product-card">
-                        <a href="#" class="product-image">
-                            <img src="assets/images/section_bg-bag3.png" alt="Moss Handbag">
-                        </a>
-                        <div class="heart-icon" onclick="toggleHeart(this)">
-                            <svg viewBox="0 0 24 24">
-                                <path
-                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                            </svg>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-brand">MOSS</div>
-                            <div class="product-price">29 000 ₽</div>
-                            <div class="color-options">
-                                <span class="color-option" style="background-color: #5E4F37;"></span>
-                                <span class="color-option" style="background-color: #A86738;"></span>
-                                <span class="color-option" style="background-color: #000000;"></span>
-                                <span class="color-option" style="background-color: #DEDEDE;"></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Product 4 -->
-                    <div class="product-card">
-                        <a href="#" class="product-image">
-                            <img src="assets/images/section_bg-bag4.png" alt="Mini Rosa Blue Handbag">
-                        </a>
-                        <div class="heart-icon" onclick="toggleHeart(this)">
-                            <svg viewBox="0 0 24 24">
-                                <path
-                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                            </svg>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-brand">MINIasdasda ROSA</div>
-                            <div class="product-price">29 000 ₽</div>
-                            <div class="color-options">
-                                <span class="color-option" style="background-color: #5E4F37;"></span>
-                                <span class="color-option" style="background-color: #A86738;"></span>
-                                <span class="color-option" style="background-color: #000000;"></span>
-                                <span class="color-option" style="background-color: #DEDEDE;"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--================================== collection-section end-->
-        <section class="WOMAN-MAN">
-            <div class="container">
-                <div class="block">
-                    <a href="#" class="img">
-                        <h2>Woman</h2>
-                    </a>
-                    <a href="#" class="img">
-                        <h2>Man</h2>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <!-- woman-man end -->
-        <a href="#" class="moni-moss">
-            <div class="container">
-                <div class="block">
-                    <h2>MINI MOSS</h2>
-                </div>
-            </div>
-        </a>
-        <!-- women-man end -->
-
-        <section class="handbag-gallery">
-            <div class="handbag-gallery__container container">
-                <div class="handbag-gallery__slider swiper">
-                    <div class="handbag-gallery__wrapper swiper-wrapper">
-                        <div class="handbag-gallery__slide swiper-slide">
-                            <a href="#" class="handbag-gallery__card">
-                                <div class="handbag-gallery__image">
-                                    <img src="assets/images/handbag1.png" alt="">
-                                </div>
-                                <a href="#" class="handbag-gallery__username">@nikname_inst</a>
-                            </a>
-                        </div>
-
-                        <div class="handbag-gallery__slide swiper-slide">
-                            <a href="#" class="handbag-gallery__card">
-                                <div class="handbag-gallery__image">
-                                    <img src="assets/images/handbag2.png" alt="">
-                                </div>
-                                <a href="#" class="handbag-gallery__username">@nikname_inst</a>
-                            </a>
-                        </div>
-
-                        <div class="handbag-gallery__slide swiper-slide">
-                            <a href="#" class="handbag-gallery__card">
-                                <div class="handbag-gallery__text">
-                                    СЛИШКОМ СМЕЛО ДЛЯ ВСЕХ,<br>
-                                    ИДЕАЛЬНО ДЛЯ ТЕБЯ
-                                </div>
-                                <div class="handbag-gallery__image">
-                                    <img src="assets/images/handbag3.png" alt="">
-                                </div>
-                                <a href="#" class="handbag-gallery__username">@nikname_inst</a>
-                            </a>
-                        </div>
-
-                        <div class="handbag-gallery__slide swiper-slide">
-                            <a href="#" class="handbag-gallery__card">
-                                <div class="handbag-gallery__image">
-                                    <img src="assets/images/handbag4.png" alt="">
-                                </div>
-                                <a href="#" class="handbag-gallery__username">@nikname_inst</a>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </section>
-        <!--====================== handbag-gallery end -->
-        <section class="deliver">
-            <div class="block">
-                <div class="box">
-                    <h1>SMB bag - твой лучший <br> друг в большом городе</h1>
-                    <a href="#">О бренде</a>
-                </div>
-            </div>
-        </section>
-        <!-- =========deliver end======= -->
-        <section class="collection-section">
-            <div class="container">
-                <h2 class="section-title2">NEW</h2>
-
-                <div class="products-grid">
-                    <!-- Product 1 -->
-                    <div class="product-card">
-                        <a href="#" class="product-image">
-                            <img src="assets/images/section_bg-bag5.png" alt="Mini Rosa Handbag">
-                        </a>
-                        <div class="heart-icon" onclick="toggleHeart(this)">
-                            <svg viewBox="0 0 24 24">
-                                <path
-                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                            </svg>
-                        </div>
-                        <!-- isnew icon -->
-                        <div class="isnew-icon">
-                            <svg width="39" height="102" viewBox="0 0 39 102" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect x="0.5" y="0.5" width="38" height="101" stroke="#91BE17" />
-                                <path
-                                    d="M13.128 60.116C13.128 59.9987 13.192 59.94 13.32 59.94H24.808C24.872 59.94 24.92 59.9613 24.952 60.004C24.984 60.036 25 60.084 25 60.148V60.932C25 60.996 24.9947 61.0547 24.984 61.108C24.9733 61.1613 24.936 61.2147 24.872 61.268L15.896 67.444C15.8213 67.4973 15.7893 67.54 15.8 67.572C15.8107 67.604 15.848 67.62 15.912 67.62H24.792C24.9307 67.62 25 67.6947 25 67.844V68.74C25 68.8787 24.9307 68.948 24.792 68.948H13.352C13.2027 68.948 13.128 68.8787 13.128 68.74V67.828C13.128 67.7427 13.1387 67.6787 13.16 67.636C13.1707 67.5933 13.2133 67.5453 13.288 67.492L22.072 61.492C22.1467 61.428 22.1733 61.3747 22.152 61.332C22.1307 61.2787 22.088 61.252 22.024 61.252H13.32C13.192 61.252 13.128 61.188 13.128 61.06V60.116ZM13.352 56.8386C13.2027 56.8386 13.128 56.7746 13.128 56.6466V49.4626C13.128 49.356 13.1867 49.3026 13.304 49.3026H14.12C14.248 49.3026 14.312 49.372 14.312 49.5106V55.0946C14.312 55.2333 14.376 55.3026 14.504 55.3026H18.248C18.3653 55.3026 18.424 55.244 18.424 55.1266V50.9826C18.424 50.8653 18.4827 50.8066 18.6 50.8066H19.448C19.4907 50.8066 19.528 50.8173 19.56 50.8386C19.5813 50.86 19.592 50.908 19.592 50.9826V55.1266C19.592 55.244 19.6507 55.3026 19.768 55.3026H23.656C23.7627 55.3026 23.816 55.2493 23.816 55.1426V49.2706C23.816 49.1533 23.8693 49.0946 23.976 49.0946H24.824C24.8773 49.0946 24.92 49.1106 24.952 49.1426C24.984 49.164 25 49.2066 25 49.2706V56.6146C25 56.764 24.9253 56.8386 24.776 56.8386H13.352ZM13.128 32.5837C13.128 32.4877 13.1547 32.4237 13.208 32.3917C13.2613 32.3491 13.3307 32.3384 13.416 32.3597L24.76 35.6557C24.92 35.7091 25 35.8264 25 36.0077V36.9837C25 37.1864 24.9253 37.3091 24.776 37.3517L15.704 39.9117C15.6507 39.9224 15.624 39.9384 15.624 39.9597C15.624 39.9811 15.656 40.0024 15.72 40.0237L24.76 42.6157C24.92 42.6691 25 42.7864 25 42.9677V43.9597C25 44.1624 24.9253 44.2851 24.776 44.3277L13.416 47.5757C13.3307 47.5971 13.2613 47.5917 13.208 47.5597C13.1547 47.5171 13.128 47.4477 13.128 47.3517V46.3277C13.128 46.2424 13.144 46.1784 13.176 46.1357C13.1973 46.0931 13.2453 46.0664 13.32 46.0557L22.632 43.4477C22.7493 43.4157 22.808 43.3837 22.808 43.3517C22.7973 43.3091 22.744 43.2771 22.648 43.2557L13.304 40.5997C13.2613 40.5784 13.224 40.5517 13.192 40.5197C13.1493 40.4771 13.128 40.4077 13.128 40.3117V39.3997C13.128 39.3037 13.144 39.2397 13.176 39.2077C13.1973 39.1651 13.2453 39.1331 13.32 39.1117L22.68 36.4877C22.776 36.4557 22.824 36.4237 22.824 36.3917C22.8133 36.3597 22.7653 36.3277 22.68 36.2957L13.304 33.6557C13.24 33.6451 13.1973 33.6184 13.176 33.5757C13.144 33.5224 13.128 33.4584 13.128 33.3837V32.5837Z"
-                                    fill="#91BE17" />
-                            </svg>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-brand">MINI ROSA</div>
-                            <div class="product-price_item">
-                                <div class="old-product-price">29 000 ₽</div>
-                                <div class="product-price">21 000 ₽</div>
-                            </div>
-
-                            <div class="color-options">
-                                <span class="color-option" style="background-color: #5E4F37;"></span>
-                                <span class="color-option" style="background-color: #A86738;"></span>
-                                <span class="color-option" style="background-color: #000000;"></span>
-                                <span class="color-option" style="background-color: #DEDEDE;"></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Product 2 -->
-                    <div class="product-card">
-                        <a href="#" class="product-image">
-                            <img src="assets/images/section_bg-bag2.png" alt="Mini Rosa Handbag Black">
-                        </a>
-                        <div class="heart-icon" onclick="toggleHeart(this)">
-                            <svg viewBox="0 0 24 24">
-                                <path
-                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                            </svg>
-
-                        </div>
-                        <!-- isnew icon -->
-                        <div class="isnew-icon">
-                            <svg width="39" height="102" viewBox="0 0 39 102" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect x="0.5" y="0.5" width="38" height="101" stroke="#91BE17" />
-                                <path
-                                    d="M13.128 60.116C13.128 59.9987 13.192 59.94 13.32 59.94H24.808C24.872 59.94 24.92 59.9613 24.952 60.004C24.984 60.036 25 60.084 25 60.148V60.932C25 60.996 24.9947 61.0547 24.984 61.108C24.9733 61.1613 24.936 61.2147 24.872 61.268L15.896 67.444C15.8213 67.4973 15.7893 67.54 15.8 67.572C15.8107 67.604 15.848 67.62 15.912 67.62H24.792C24.9307 67.62 25 67.6947 25 67.844V68.74C25 68.8787 24.9307 68.948 24.792 68.948H13.352C13.2027 68.948 13.128 68.8787 13.128 68.74V67.828C13.128 67.7427 13.1387 67.6787 13.16 67.636C13.1707 67.5933 13.2133 67.5453 13.288 67.492L22.072 61.492C22.1467 61.428 22.1733 61.3747 22.152 61.332C22.1307 61.2787 22.088 61.252 22.024 61.252H13.32C13.192 61.252 13.128 61.188 13.128 61.06V60.116ZM13.352 56.8386C13.2027 56.8386 13.128 56.7746 13.128 56.6466V49.4626C13.128 49.356 13.1867 49.3026 13.304 49.3026H14.12C14.248 49.3026 14.312 49.372 14.312 49.5106V55.0946C14.312 55.2333 14.376 55.3026 14.504 55.3026H18.248C18.3653 55.3026 18.424 55.244 18.424 55.1266V50.9826C18.424 50.8653 18.4827 50.8066 18.6 50.8066H19.448C19.4907 50.8066 19.528 50.8173 19.56 50.8386C19.5813 50.86 19.592 50.908 19.592 50.9826V55.1266C19.592 55.244 19.6507 55.3026 19.768 55.3026H23.656C23.7627 55.3026 23.816 55.2493 23.816 55.1426V49.2706C23.816 49.1533 23.8693 49.0946 23.976 49.0946H24.824C24.8773 49.0946 24.92 49.1106 24.952 49.1426C24.984 49.164 25 49.2066 25 49.2706V56.6146C25 56.764 24.9253 56.8386 24.776 56.8386H13.352ZM13.128 32.5837C13.128 32.4877 13.1547 32.4237 13.208 32.3917C13.2613 32.3491 13.3307 32.3384 13.416 32.3597L24.76 35.6557C24.92 35.7091 25 35.8264 25 36.0077V36.9837C25 37.1864 24.9253 37.3091 24.776 37.3517L15.704 39.9117C15.6507 39.9224 15.624 39.9384 15.624 39.9597C15.624 39.9811 15.656 40.0024 15.72 40.0237L24.76 42.6157C24.92 42.6691 25 42.7864 25 42.9677V43.9597C25 44.1624 24.9253 44.2851 24.776 44.3277L13.416 47.5757C13.3307 47.5971 13.2613 47.5917 13.208 47.5597C13.1547 47.5171 13.128 47.4477 13.128 47.3517V46.3277C13.128 46.2424 13.144 46.1784 13.176 46.1357C13.1973 46.0931 13.2453 46.0664 13.32 46.0557L22.632 43.4477C22.7493 43.4157 22.808 43.3837 22.808 43.3517C22.7973 43.3091 22.744 43.2771 22.648 43.2557L13.304 40.5997C13.2613 40.5784 13.224 40.5517 13.192 40.5197C13.1493 40.4771 13.128 40.4077 13.128 40.3117V39.3997C13.128 39.3037 13.144 39.2397 13.176 39.2077C13.1973 39.1651 13.2453 39.1331 13.32 39.1117L22.68 36.4877C22.776 36.4557 22.824 36.4237 22.824 36.3917C22.8133 36.3597 22.7653 36.3277 22.68 36.2957L13.304 33.6557C13.24 33.6451 13.1973 33.6184 13.176 33.5757C13.144 33.5224 13.128 33.4584 13.128 33.3837V32.5837Z"
-                                    fill="#91BE17" />
-                            </svg>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-brand">MINI ROSA</div>
-                            <div class="product-price_item">
-                                <div class="old-product-price">29 000 ₽</div>
-                                <div class="product-price">21 000 ₽</div>
-                            </div>
-                            <div class="color-options">
-                                <span class="color-option" style="background-color: #5E4F37;"></span>
-                                <span class="color-option" style="background-color: #A86738;"></span>
-                                <span class="color-option" style="background-color: #000000;"></span>
-                                <span class="color-option" style="background-color: #DEDEDE;"></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Product 3 -->
-                    <div class="product-card">
-                        <a href="#" class="product-image">
-                            <img src="assets/images/section_bg-bag6.png" alt="Moss Handbag">
-                        </a>
-                        <div class="heart-icon" onclick="toggleHeart(this)">
-                            <svg viewBox="0 0 24 24">
-                                <path
-                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                            </svg>
-                        </div>
-                        <!-- isnew icon -->
-                        <div class="isnew-icon">
-                            <svg width="39" height="102" viewBox="0 0 39 102" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect x="0.5" y="0.5" width="38" height="101" stroke="#91BE17" />
-                                <path
-                                    d="M13.128 60.116C13.128 59.9987 13.192 59.94 13.32 59.94H24.808C24.872 59.94 24.92 59.9613 24.952 60.004C24.984 60.036 25 60.084 25 60.148V60.932C25 60.996 24.9947 61.0547 24.984 61.108C24.9733 61.1613 24.936 61.2147 24.872 61.268L15.896 67.444C15.8213 67.4973 15.7893 67.54 15.8 67.572C15.8107 67.604 15.848 67.62 15.912 67.62H24.792C24.9307 67.62 25 67.6947 25 67.844V68.74C25 68.8787 24.9307 68.948 24.792 68.948H13.352C13.2027 68.948 13.128 68.8787 13.128 68.74V67.828C13.128 67.7427 13.1387 67.6787 13.16 67.636C13.1707 67.5933 13.2133 67.5453 13.288 67.492L22.072 61.492C22.1467 61.428 22.1733 61.3747 22.152 61.332C22.1307 61.2787 22.088 61.252 22.024 61.252H13.32C13.192 61.252 13.128 61.188 13.128 61.06V60.116ZM13.352 56.8386C13.2027 56.8386 13.128 56.7746 13.128 56.6466V49.4626C13.128 49.356 13.1867 49.3026 13.304 49.3026H14.12C14.248 49.3026 14.312 49.372 14.312 49.5106V55.0946C14.312 55.2333 14.376 55.3026 14.504 55.3026H18.248C18.3653 55.3026 18.424 55.244 18.424 55.1266V50.9826C18.424 50.8653 18.4827 50.8066 18.6 50.8066H19.448C19.4907 50.8066 19.528 50.8173 19.56 50.8386C19.5813 50.86 19.592 50.908 19.592 50.9826V55.1266C19.592 55.244 19.6507 55.3026 19.768 55.3026H23.656C23.7627 55.3026 23.816 55.2493 23.816 55.1426V49.2706C23.816 49.1533 23.8693 49.0946 23.976 49.0946H24.824C24.8773 49.0946 24.92 49.1106 24.952 49.1426C24.984 49.164 25 49.2066 25 49.2706V56.6146C25 56.764 24.9253 56.8386 24.776 56.8386H13.352ZM13.128 32.5837C13.128 32.4877 13.1547 32.4237 13.208 32.3917C13.2613 32.3491 13.3307 32.3384 13.416 32.3597L24.76 35.6557C24.92 35.7091 25 35.8264 25 36.0077V36.9837C25 37.1864 24.9253 37.3091 24.776 37.3517L15.704 39.9117C15.6507 39.9224 15.624 39.9384 15.624 39.9597C15.624 39.9811 15.656 40.0024 15.72 40.0237L24.76 42.6157C24.92 42.6691 25 42.7864 25 42.9677V43.9597C25 44.1624 24.9253 44.2851 24.776 44.3277L13.416 47.5757C13.3307 47.5971 13.2613 47.5917 13.208 47.5597C13.1547 47.5171 13.128 47.4477 13.128 47.3517V46.3277C13.128 46.2424 13.144 46.1784 13.176 46.1357C13.1973 46.0931 13.2453 46.0664 13.32 46.0557L22.632 43.4477C22.7493 43.4157 22.808 43.3837 22.808 43.3517C22.7973 43.3091 22.744 43.2771 22.648 43.2557L13.304 40.5997C13.2613 40.5784 13.224 40.5517 13.192 40.5197C13.1493 40.4771 13.128 40.4077 13.128 40.3117V39.3997C13.128 39.3037 13.144 39.2397 13.176 39.2077C13.1973 39.1651 13.2453 39.1331 13.32 39.1117L22.68 36.4877C22.776 36.4557 22.824 36.4237 22.824 36.3917C22.8133 36.3597 22.7653 36.3277 22.68 36.2957L13.304 33.6557C13.24 33.6451 13.1973 33.6184 13.176 33.5757C13.144 33.5224 13.128 33.4584 13.128 33.3837V32.5837Z"
-                                    fill="#91BE17" />
-                            </svg>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-brand">MINI ROSA</div>
-                            <div class="product-price_item">
-                                <div class="old-product-price">29 000 ₽</div>
-                                <div class="product-price">21 000 ₽</div>
-                            </div>
-                            <div class="color-options">
-                                <span class="color-option" style="background-color: #5E4F37;"></span>
-                                <span class="color-option" style="background-color: #A86738;"></span>
-                                <span class="color-option" style="background-color: #000000;"></span>
-                                <span class="color-option" style="background-color: #DEDEDE;"></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Product 4 -->
-                    <div class="product-card">
-                        <a href="#" class="product-image">
-                            <img src="assets/images/section_bg-bag7.png" alt="Mini Rosa Blue Handbag">
-                        </a>
-                        <div class="heart-icon" onclick="toggleHeart(this)">
-                            <svg viewBox="0 0 24 24">
-                                <path
-                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                            </svg>
-                        </div>
-                        <!-- isnew icon -->
-                        <div class="isnew-icon">
-                            <svg width="39" height="102" viewBox="0 0 39 102" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect x="0.5" y="0.5" width="38" height="101" stroke="#91BE17" />
-                                <path
-                                    d="M13.128 60.116C13.128 59.9987 13.192 59.94 13.32 59.94H24.808C24.872 59.94 24.92 59.9613 24.952 60.004C24.984 60.036 25 60.084 25 60.148V60.932C25 60.996 24.9947 61.0547 24.984 61.108C24.9733 61.1613 24.936 61.2147 24.872 61.268L15.896 67.444C15.8213 67.4973 15.7893 67.54 15.8 67.572C15.8107 67.604 15.848 67.62 15.912 67.62H24.792C24.9307 67.62 25 67.6947 25 67.844V68.74C25 68.8787 24.9307 68.948 24.792 68.948H13.352C13.2027 68.948 13.128 68.8787 13.128 68.74V67.828C13.128 67.7427 13.1387 67.6787 13.16 67.636C13.1707 67.5933 13.2133 67.5453 13.288 67.492L22.072 61.492C22.1467 61.428 22.1733 61.3747 22.152 61.332C22.1307 61.2787 22.088 61.252 22.024 61.252H13.32C13.192 61.252 13.128 61.188 13.128 61.06V60.116ZM13.352 56.8386C13.2027 56.8386 13.128 56.7746 13.128 56.6466V49.4626C13.128 49.356 13.1867 49.3026 13.304 49.3026H14.12C14.248 49.3026 14.312 49.372 14.312 49.5106V55.0946C14.312 55.2333 14.376 55.3026 14.504 55.3026H18.248C18.3653 55.3026 18.424 55.244 18.424 55.1266V50.9826C18.424 50.8653 18.4827 50.8066 18.6 50.8066H19.448C19.4907 50.8066 19.528 50.8173 19.56 50.8386C19.5813 50.86 19.592 50.908 19.592 50.9826V55.1266C19.592 55.244 19.6507 55.3026 19.768 55.3026H23.656C23.7627 55.3026 23.816 55.2493 23.816 55.1426V49.2706C23.816 49.1533 23.8693 49.0946 23.976 49.0946H24.824C24.8773 49.0946 24.92 49.1106 24.952 49.1426C24.984 49.164 25 49.2066 25 49.2706V56.6146C25 56.764 24.9253 56.8386 24.776 56.8386H13.352ZM13.128 32.5837C13.128 32.4877 13.1547 32.4237 13.208 32.3917C13.2613 32.3491 13.3307 32.3384 13.416 32.3597L24.76 35.6557C24.92 35.7091 25 35.8264 25 36.0077V36.9837C25 37.1864 24.9253 37.3091 24.776 37.3517L15.704 39.9117C15.6507 39.9224 15.624 39.9384 15.624 39.9597C15.624 39.9811 15.656 40.0024 15.72 40.0237L24.76 42.6157C24.92 42.6691 25 42.7864 25 42.9677V43.9597C25 44.1624 24.9253 44.2851 24.776 44.3277L13.416 47.5757C13.3307 47.5971 13.2613 47.5917 13.208 47.5597C13.1547 47.5171 13.128 47.4477 13.128 47.3517V46.3277C13.128 46.2424 13.144 46.1784 13.176 46.1357C13.1973 46.0931 13.2453 46.0664 13.32 46.0557L22.632 43.4477C22.7493 43.4157 22.808 43.3837 22.808 43.3517C22.7973 43.3091 22.744 43.2771 22.648 43.2557L13.304 40.5997C13.2613 40.5784 13.224 40.5517 13.192 40.5197C13.1493 40.4771 13.128 40.4077 13.128 40.3117V39.3997C13.128 39.3037 13.144 39.2397 13.176 39.2077C13.1973 39.1651 13.2453 39.1331 13.32 39.1117L22.68 36.4877C22.776 36.4557 22.824 36.4237 22.824 36.3917C22.8133 36.3597 22.7653 36.3277 22.68 36.2957L13.304 33.6557C13.24 33.6451 13.1973 33.6184 13.176 33.5757C13.144 33.5224 13.128 33.4584 13.128 33.3837V32.5837Z"
-                                    fill="#91BE17" />
-                            </svg>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-brand">MINI ROSA</div>
-                            <div class="product-price_item">
-                                <div class="old-product-price">29 000 ₽</div>
-                                <div class="product-price">21 000 ₽</div>
-                            </div>
-                            <div class="color-options">
-                                <span class="color-option" style="background-color: #5E4F37;"></span>
-                                <span class="color-option" style="background-color: #A86738;"></span>
-                                <span class="color-option" style="background-color: #000000;"></span>
-                                <span class="color-option" style="background-color: #DEDEDE;"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ==============collection section end -->
-        <section class="deliver2 ">
-            <div class="block">
-                <div class="box">
-                    <h1>Подбери подарочную <br> карту для себя <br>
-                        или друга</h1>
-                    <a href="#">Подарить карту</a>
-                </div>
-            </div>
-        </section>
-        <!-- deliver2 end -->
-        <section class="smb-newsletter-section">
-            <div class="smb-newsletter-container">
-                <h1 class="smb-newsletter-title">SMB SECRET STORE</h1>
-                <p class="smb-newsletter-description">Секретные скидки, еженедельные новости,</p>
-                <p class="smb-newsletter-description">письма от основателя бренда</p>
-                <button class="smb-subscribe-btn" id="smbSubscribeBtn">ПОДПИСАТЬСЯ</button>
-            </div>
-        </section>
-
         <div class="smb-modal-overlay" id="smbModalOverlay">
             <div class="smb-modal">
                 <button class="smb-modal-close" id="smbModalClose"><svg xmlns="http://www.w3.org/2000/svg" width="14"
