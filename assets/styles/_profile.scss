@@ -205,6 +205,11 @@
     font-size: 12px;
     font-weight: 400;
   }
+  .custom_checkbox {
+    @media (max-width: 556px) {
+      margin-top: 5px;
+    }
+  }
   p {
     color: #555;
     font-size: 12px;

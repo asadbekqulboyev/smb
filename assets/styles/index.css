@@ -516,6 +516,11 @@
   font-size: 12px;
   font-weight: 400;
 }
+@media (max-width: 556px) {
+  .form__checkbox .custom_checkbox {
+    margin-top: 5px;
+  }
+}
 .form__checkbox p {
   color: #555;
   font-size: 12px;
