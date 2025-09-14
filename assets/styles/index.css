@@ -310,6 +310,7 @@
 @media (max-width: 556px) {
   .profile__sidebar {
     width: 100%;
+    display: none;
   }
 }
 .profile__user {
@@ -414,6 +415,15 @@
   .profile__content .section_title {
     margin-top: 0;
     margin-bottom: 24px;
+    gap: 8px;
+  }
+}
+.profile__content .section_title svg {
+  display: none;
+}
+@media (max-width: 556px) {
+  .profile__content .section_title svg {
+    display: block;
   }
 }
 .profile__form {
