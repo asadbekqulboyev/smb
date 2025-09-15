@@ -214,27 +214,119 @@
                     </div>
                 </div>
                 <ul class="profile__menu">
-                    <li><a href="#">Заказы</a></li>
-                    <li><a href="#">Избранные</a></li>
-                    <li><a href="#">Бонусы</a></li>
-                    <li><a href="#">Подарочные карты</a></li>
-                    <li><a href="#">Контактная информация</a></li>
-                    <li><a href="#">Пароль и безопасность</a></li>
+                    <li><a class="active" href="#profile__content1">Заказы</a></li>
+                    <li><a href="#profile__content2">Избранные</a></li>
+                    <li><a href="#profile__content3">Бонусы</a></li>
+                    <li><a href="#profile__content4">Подарочные карты</a></li>
+                    <li><a href="#profile__content5">Контактная информация</a></li>
+                    <li><a href="#profile__content6">Пароль и безопасность</a></li>
                     <li class="logout"><a href="#">Выйти</a></li>
                 </ul>
             </aside>
-            <div class="profile__content">
+            <div class="profile__content" id="profile__content1">
                 <h3 class="section_title d-flex align-items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <mask id="mask0_870_59121" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
-                          <rect x="16" y="16" width="16" height="16" transform="rotate(-180 16 16)" fill="#D9D9D9"/>
+                        <mask id="mask0_870_59121" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                            width="16" height="16">
+                            <rect x="16" y="16" width="16" height="16" transform="rotate(-180 16 16)" fill="#D9D9D9" />
                         </mask>
                         <g mask="url(#mask0_870_59121)">
-                          <path d="M10.6554 1.56583L11.6016 2.512L6.1119 8.00167L11.6016 13.4913L10.6554 14.4375L4.21956 8.00167L10.6554 1.56583Z" fill="#272727"/>
+                            <path
+                                d="M10.6554 1.56583L11.6016 2.512L6.1119 8.00167L11.6016 13.4913L10.6554 14.4375L4.21956 8.00167L10.6554 1.56583Z"
+                                fill="#272727" />
                         </g>
-                      </svg>
+                    </svg>
+                    <span>бонусы</span>
+                </h3>
+                <div class="profile__content_bonus">
+                    <div class="bonus">
+                        <div class="bonus_info">
+                            <div class="bonus_info_top">
+                                <div class="bonus_title">
+                                    твои бонусы
+                                </div>
+                                <span>1 500</span>
+                            </div>
+                            <span class="bonus_logo">SMB</span>
+                        </div>
+                        <img src="assets/images/bonus_img.png" alt="">
+                    </div>
+                    <div class="bonus_desc">
+                        <p>Никаких ограничений. Оплачивай бонусами заказ полностью <br> или его часть.
+                            Нам по кайфу делать твой шопинг еще более комфортным</p>
+                        <p>1 бонус = 1 ₽ </p>
+                        <p class="uppercase">Срок действия бонусов — 6 месяцев с момента начисления</p>
+                        <p class="uppercase">Лови выгоду, пока не сгорела</p>
+                        <a href="#" class="btn_politic">Условия программы лояльности</a>
+                    </div>
+                    <div class="history">
+                        <h2 class="section_title">ИСТОРИЯ АКТИВНОСТИ</h2>
+                        <div class="history_list">
+                            <div class="history_item plus">
+                                <div class="history_info">
+                                    <span class="history_points">
+                                        <span class="history_points_number">+ 400 Б </span>
+                                    </span>
+                                    <span class="history_desc">Покупка в интернет-магазине</span>
+                                    <span class="history_date">Срок действия до 16.06.2026</span>
+                                </div>
+                                <span class="history_time">16.06.2025</span>
+                            </div>
+
+                            <div class="history_item plus">
+                                <div class="history_info">
+                                    <span class="history_points">+ 400 Б</span>
+                                    <span class="history_desc">Покупка в интернет-магазине</span>
+                                    <span class="history_date">Срок действия до 16.06.2026</span>
+                                </div>
+                                <span class="history_time">16.06.2025</span>
+                            </div>
+
+                            <div class="history_item plus">
+                                <div class="history_info">
+                                    <span class="history_points">+ 400 Б</span>
+                                    <span class="history_desc">Покупка в интернет-магазине</span>
+                                    <span class="history_date">Срок действия до 16.06.2026</span>
+                                </div>
+                                <span class="history_time">16.06.2025</span>
+                            </div>
+
+                            <div class="history_item plus">
+                                <div class="history_info">
+                                    <span class="history_points">+ 100 Б</span>
+                                    <span class="history_desc">Покупка в интернет-магазине</span>
+                                    <span class="history_date">Срок действия до 16.06.2026</span>
+                                </div>
+                                <span class="history_time">16.06.2025</span>
+                            </div>
+
+                            <div class="history_item minus">
+                                <div class="history_info">
+                                    <span class="history_points">- 150 Б</span>
+                                    <span class="history_desc">Списание бонусов</span>
+                                </div>
+                                <span class="history_time">12.06.2025</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="profile__content" id="profile__content4">
+                <h3 class="section_title d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <mask id="mask0_870_59121" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                            width="16" height="16">
+                            <rect x="16" y="16" width="16" height="16" transform="rotate(-180 16 16)" fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_870_59121)">
+                            <path
+                                d="M10.6554 1.56583L11.6016 2.512L6.1119 8.00167L11.6016 13.4913L10.6554 14.4375L4.21956 8.00167L10.6554 1.56583Z"
+                                fill="#272727" />
+                        </g>
+                    </svg>
                     <span>Контактные данные</span>
-                    </h3>
+                </h3>
                 <form class="profile__form">
                     <label class="form__row">
                         <span class="input_title">Имя*</span>
@@ -300,6 +392,52 @@
                     </label>
 
                     <button type="submit" class="btn">Сохранить данные</button>
+                </form>
+            </div>
+            <div class="profile__content pasword_content" id="profile__content6">
+                <h3 class="section_title d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <mask id="mask0_870_59121" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                            width="16" height="16">
+                            <rect x="16" y="16" width="16" height="16" transform="rotate(-180 16 16)" fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_870_59121)">
+                            <path
+                                d="M10.6554 1.56583L11.6016 2.512L6.1119 8.00167L11.6016 13.4913L10.6554 14.4375L4.21956 8.00167L10.6554 1.56583Z"
+                                fill="#272727" />
+                        </g>
+                    </svg>
+                    <span>Изменить пароль</span>
+                </h3>
+                <p class="pasword_desc">Пароль может содержать только латинские буквы, символы и цифры</p>
+                <form class="profile__form">
+
+                    <label class="modal_input form__row w50">
+                        <span class="modal_input-title">текущий пароль*</span>
+                        <input type="password" id="passowrd" placeholder="Введите пароль" required />
+                        <span class="eye ">
+                            <img src="assets/images/eye.svg" alt="" class=" ">
+                        </span>
+                    </label>
+                    <label class="modal_input form__row w50">
+                        <span class="modal_input-title">новый пароль*</span>
+                        <input type="password" id="passowrd" placeholder="Придумать новый пароль" required />
+                        <span class="eye ">
+                            <img src="assets/images/eye.svg" alt="" class=" ">
+                        </span>
+                    </label>
+                    <label class="modal_input form__row w50">
+                        <span class="modal_input-title">повторите пароль*</span>
+                        <input type="password" id="passowrd" placeholder="Повторить пароль" required />
+                        <span class="eye ">
+                            <img src="assets/images/eye.svg" alt="" class=" ">
+                        </span>
+                    </label>
+                    <div class="btn_container">
+                        <button type="submit" class="btn">Сохранить данные</button>
+                        <button class="replace_password">пароль изменен</button>
+                    </div>
+
                 </form>
             </div>
         </section>
@@ -779,6 +917,100 @@
                 </div>
             </div>
         </footer>
+    </div>
+    <div class="modal" id="politic">
+        <div class="modal_content">
+            <span class="exit"><img src="assets/images/close.svg" alt=""></span>
+            <div class="modal_title">Как получить бонусы</div>
+            <div class="modal_content_info">
+                <div class="bonus_section">
+                    <h2 class="bonus_section__title">ПРИНЦИП РАБОТЫ ПРОГРАММЫ</h2>
+                    <p class="text_16">
+                        Бонусная программа представляет собой систему накопления баллов, которые начисляются за покупки.
+                        После совершения покупки бонусы зачисляются автоматически через 14 дней и автоматически
+                        становятся доступными на счету. Каждый накопленный балл эквивалентен сумме рубля и может быть
+                        использован для оплаты до 30% от стоимости товаров и услуг.
+                    </p>
+                </div>
+
+                <div class="bonus_section">
+                    <h3 class="bonus_section__subtitle">СТАРТОВЫЕ БОНУСЫ</h3>
+                    <p class="text_16">
+                        Регистрируясь в программе при покупке выше 1000 рублей, пользователь получает стартовые бонусы.
+                        Также бонусы начисляются при создании учетной записи или оформлении карты участника. Важно
+                        отметить, что условием начисления может быть подтверждение номера телефона.
+                    </p>
+                </div>
+
+                <div class="bonus_section">
+                    <h3 class="bonus_section__subtitle">НАЧИСЛЕНИЕ БОНУСОВ</h3>
+                    <p class="text_16">
+                        Первые покупки приносят 5% бонусов от потраченной суммы. Все прочие покупки начисляются в
+                        соответствии с уровнем пользователя.
+                    </p>
+                </div>
+
+                <div class="bonus_section">
+                    <h3 class="bonus_section__subtitle">СИСТЕМА УРОВНЕЙ</h3>
+                    <p class="text_16">
+                        Накопительная программа включает три уровня привилегий:
+                    </p>
+                    <ul class="list_bullets">
+                        <li>Базовый уровень (до 24 999 рублей) — 5% бонусов;</li>
+                        <li>Серебряный уровень (25 000 — 99 999 рублей) — 7% бонусов;</li>
+                        <li>Золотой уровень (от 100 000 рублей и выше) — 10% бонусов.</li>
+                    </ul>
+                </div>
+
+                <div class="bonus_section">
+                    <h3 class="bonus_section__subtitle">ПРАВИЛА ИСПОЛЬЗОВАНИЯ</h3>
+                    <p class="text_16">
+                        Применение бонусов возможно для оплаты до 30% от стоимости покупки, за исключением акционных
+                        товаров, персонализированных сертификатов и подарочных карт.
+                        Бонусы не подлежат обмену на наличные средства и не начисляются за доставку.
+                    </p>
+                </div>
+
+                <div class="bonus_section">
+                    <h3 class="bonus_section__subtitle">ПРОВЕРКА БАЛАНСА</h3>
+                    <p class="text_16">
+                        Отследить баланс бонусов можно через личный кабинет: "Просмотр операций начислений/списаний", а
+                        также в чеке после покупки.
+                    </p>
+                </div>
+
+                <div class="bonus_section">
+                    <h3 class="bonus_section__subtitle">ЧТО ТАКОЕ БОНУСНАЯ СИСТЕМА</h3>
+                    <p class="text_16">
+                        Бонусная система — это удобный способ накопления вознаграждений за покупки. Накопленные баллы
+                        действуют 14 дней с момента начисления, далее могут быть потрачены на следующие покупки.
+                    </p>
+                </div>
+
+                <div class="bonus_section">
+                    <h3 class="bonus_section__subtitle">ПРИВЕТСТВЕННЫЕ НАКОПИТЕЛЬНЫЕ БАЛЛЫ</h3>
+                    <p class="text_16">
+                        При регистрации на сайте или в момент завершения первой покупки вы можете получить
+                        приветственные бонусы, которые будут доступны в разделе "Мои бонусы".
+                    </p>
+                </div>
+
+                <div class="bonus_section">
+                    <h3 class="bonus_section__subtitle">БОНУСЫ ЗА ПЕРВУЮ ПОКУПКУ</h3>
+                    <p class="text_16">
+                        При первой покупке начисляется фиксированный процент бонусов — обычно 5% от суммы покупки. Этот
+                        процент может быть временно увеличен в акциях.
+                    </p>
+                </div>
+
+                <div class="bonus_section">
+                    <h3 class="bonus_section__subtitle">УРОВНИ БОНУСОВ</h3>
+                    <p class="text_16">
+                        Участник программы может переходить между уровнями в зависимости от общей суммы покупок за год.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="modal" id="login">
         <div class="modal_content">
