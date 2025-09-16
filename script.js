@@ -447,4 +447,42 @@ $(document).ready(function () {
     $(".profile__content").hide();
     $($(this).attr("href")).show();
   });
+  // gift
+
+  // Forma ochish
+  $(".gift_cards_add_btn").on("click", function () {
+    $(".gift_cards_form").slideDown(0).css("display", "flex");
+  });
+
+  // Forma yopish
+  $(".btn_cancel").on("click", function (e) {
+    e.preventDefault();
+    $(".gift_cards_form").slideUp();
+  });
+  $(".modal_cartax").click(function (e) {
+    e.preventDefault();
+    $(".modal#cartax").fadeIn();
+  });
+  // orders tabs
+  $(".orders__tab").on("click", function () {
+    $(".orders__tab").removeClass("active");
+    $(this).addClass("active");
+
+    let tab = $(this).data("tab");
+    $(".orders__content").removeClass("active");
+    $("#" + tab).addClass("active");
+  });
+  // img slider
+
+  const imageSlider = new Swiper(".image_slider", {
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 });

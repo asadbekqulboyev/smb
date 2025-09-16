@@ -513,6 +513,238 @@
 .profile__form {
   max-width: 824px;
 }
+.profile .gift_cards_section .gift_cards_title {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.profile .gift_cards_section .card_number {
+  color: #272727;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%;
+  text-transform: uppercase;
+}
+.profile .gift_cards_section .gift_cards_add_btn {
+  border: 1px solid #555;
+  background: #fff;
+  padding: 8px 16px;
+  border-radius: 100px;
+  cursor: pointer;
+  margin-bottom: 60px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 15.6px */
+  text-transform: uppercase;
+}
+.profile .gift_cards_section .gift_cards_form {
+  display: none;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .profile .gift_cards_section .gift_cards_form {
+    flex-direction: column;
+  }
+}
+.profile .gift_cards_section .gift_cards_form #card_number {
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+.profile .gift_cards_section .gift_cards_form .gift_card_new {
+  width: 100%;
+  max-width: 330px;
+  height: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--Green, #91be17);
+  background: #fff;
+  position: relative;
+}
+@media (max-width: 556px) {
+  .profile .gift_cards_section .gift_cards_form .gift_card_new {
+    max-width: 100%;
+  }
+}
+.profile .gift_cards_section .gift_cards_form .gift_card_new input {
+  display: none;
+}
+.profile .gift_cards_section .gift_cards_form .gift_card_inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 466px;
+  width: 100%;
+}
+.profile .gift_cards_section .gift_cards_form .gift_card_inputs input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  display: block;
+}
+.profile .gift_cards_section .gift_cards_form .gift_card_inputs .gift_card_form_actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+@media (max-width: 768px) {
+  .profile .gift_cards_section .gift_cards_form .gift_card_inputs .gift_card_form_actions {
+    margin-top: 16px;
+  }
+}
+.profile .gift_cards_section .gift_cards_form .gift_card_inputs .gift_card_form_actions button {
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  color: #555;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  text-transform: uppercase;
+  border-radius: 100px;
+}
+.profile .gift_cards_section .gift_cards_form .gift_card_inputs .gift_card_form_actions .btn_cancel {
+  border: 1px solid #555;
+  background: #fff;
+  color: #555;
+}
+.profile .gift_cards_section .gift_cards_form .gift_card_inputs .gift_card_form_actions .btn_add {
+  background: #000;
+  color: #858585;
+  background: #e8e8e8;
+}
+.profile .gift_cards_section .gift_cards_list .gift_card_item {
+  border-bottom: 1px solid #e8e8e8;
+  padding: 24px 0 16px;
+  gap: 24px;
+}
+@media (max-width: 992px) {
+  .profile .gift_cards_section .gift_cards_list .gift_card_item {
+    flex-direction: column;
+  }
+}
+.profile .gift_cards_section .gift_cards_list .gift_card_item .gift_card_img img {
+  width: 100%;
+  max-width: 330px;
+  border-radius: 4px;
+}
+@media (max-width: 556px) {
+  .profile .gift_cards_section .gift_cards_list .gift_card_item .gift_card_img img {
+    max-width: 100%;
+  }
+}
+.profile .gift_cards_section .gift_cards_list .gift_card_item .gift_card_info p {
+  color: #858585;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  text-transform: uppercase;
+}
+.profile .gift_cards_section .gift_cards_list .gift_card_item .gift_card_info p span {
+  color: #272727;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  text-transform: uppercase;
+  padding-left: 12px;
+}
+.profile .gift_cards_section .gift_cards_footer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.profile .gift_cards_section .gift_cards_footer a {
+  color: var(--Grey, #555);
+  font-family: "Helvetica Neue";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #555;
+}
+.profile .orders_tab {
+  padding: 40px 16px;
+}
+.profile .orders__tabs {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgba(164, 164, 164, 0.3);
+}
+.profile .orders__tabs .orders__tab {
+  padding: 8px 0;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+  border-bottom: 1px solid transparent;
+  background: #fff;
+}
+.profile .orders__tabs .orders__tab.active {
+  border-color: #555;
+}
+.profile .orders__content {
+  display: none;
+}
+.profile .orders__content.active {
+  display: block;
+}
+.profile .orders__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+.profile .order-card {
+  border: 1px solid #eee;
+  padding: 15px;
+  position: relative;
+  background: #fff;
+  text-align: center;
+}
+.profile .order-card__status {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #f2f2f2;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+.profile .order-card__img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.profile .order-card__id {
+  font-size: 14px;
+  font-weight: 500;
+}
+.profile .order-card__desc {
+  font-size: 13px;
+  color: #555;
+}
+.profile .order-card__price {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+}
 
 .section_title {
   font-size: 16px;
@@ -521,7 +753,8 @@
   margin: 20px 0 10px;
 }
 
-.input_title {
+.input_title,
+.card_number {
   display: block;
   margin-bottom: 2px;
   color: #272727;
@@ -531,7 +764,8 @@
   text-transform: uppercase;
 }
 @media (max-width: 556px) {
-  .input_title {
+  .input_title,
+  .card_number {
     margin-bottom: 4px;
   }
 }
