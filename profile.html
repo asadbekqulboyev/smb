@@ -214,9 +214,9 @@
                     </div>
                 </div>
                 <ul class="profile__menu">
-                    <li><a href="#profile__content1">Заказы</a></li>
+                    <li><a href="#profile__content1" class="active">Заказы</a></li>
                     <li><a href="#profile__content2">Избранные</a></li>
-                    <li><a class="active" href="#profile__content3">Бонусы</a></li>
+                    <li><a href="#profile__content3">Бонусы</a></li>
                     <li><a href="#profile__content4">Подарочные карты</a></li>
                     <li><a href="#profile__content5">Контактная информация</a></li>
                     <li><a href="#profile__content6">Пароль и безопасность</a></li>
@@ -231,73 +231,205 @@
                     </div>
 
                     <div class="orders__content active" id="active">
-                        <div class="orders__list">
-
+                        <div class="orders__list justify-content-start" style="gap: 4px;">
                             <div class="order-card">
-                                <span class="order-card__status">Завершен</span>
+                                <div class="order_card_top">
 
-                                <!-- Swiper -->
-                                <div class="swiper order-card__slider">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <img src="assets/images/section_bg-bag3.png" alt="bag"
-                                                class="order-card__img" />
+                                    <span class="order-card__status active">Готовится к отправке</span>
+
+                                    <!-- Swiper -->
+                                    <div class="swiper order-card__slider">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/section_bg-bag3.png" alt="bag"
+                                                    class="order-card__img" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/section_bg-bag4.png" alt="bag"
+                                                    class="order-card__img" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/section_bg-bag3.png" alt="bag"
+                                                    class="order-card__img" />
+                                            </div>
                                         </div>
-                                        <div class="swiper-slide">
-                                            <img src="assets/images/section_bg-bag4.png" alt="bag"
-                                                class="order-card__img" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="assets/images/section_bg-bag3.png" alt="bag"
-                                                class="order-card__img" />
-                                        </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
                                     </div>
-
-                                    <div class="swiper-button-next"></div>
-                                    <div class="swiper-button-prev"></div>
                                 </div>
-
                                 <p class="order-card__id">№ 123456</p>
                                 <p class="order-card__desc">BLANCA, MOSS</p>
                                 <p class="order-card__price">85 800 ₽</p>
                             </div>
-
                             <div class="order-card">
-                                <span class="order-card__status">Завершен</span>
+                                <div class="order_card_top">
 
-                                <!-- Swiper -->
-                                <div class="swiper order-card__slider">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <img src="assets/images/section_bg-bag3.png" alt="bag"
-                                                class="order-card__img" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="assets/images/section_bg-bag3.png" alt="bag"
-                                                class="order-card__img" />
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="assets/images/section_bg-bag4.png" alt="bag"
-                                                class="order-card__img" />
-                                        </div>
+                                    <span class="order-card__status active">Готовится к отправке</span>
 
+                                    <!-- Swiper -->
+                                    <div class="swiper order-card__slider">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/section_bg-bag4.png" alt="bag"
+                                                    class="order-card__img" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/section_bg-bag3.png" alt="bag"
+                                                    class="order-card__img" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/section_bg-bag3.png" alt="bag"
+                                                    class="order-card__img" />
+                                            </div>
+
+
+                                        </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
                                     </div>
-
-                                    <div class="swiper-button-next"></div>
-                                    <div class="swiper-button-prev"></div>
                                 </div>
-
                                 <p class="order-card__id">№ 123456</p>
                                 <p class="order-card__desc">MOSS</p>
                                 <p class="order-card__price">20 400 ₽</p>
                             </div>
 
                         </div>
+                        <div class="order_banner">
+                            <img src="assets/images/order_banner.png" alt="">
+                            <div class="order_info">
+                                <p class="order_info_title">Бонусы</p>
+                                <p class="order_info_text">Твои бонусы: <span>150</span></p>
+                                <a href="#" class="button">Перейти в каталог</a>
+                            </div>
+                        </div>
                     </div>
+                    <div class="orders__content " id="history">
+                        <div class="orders__list">
+                            <div class="order-card">
+                                <div class="order_card_top">
+
+                                    <span class="order-card__status">Завершен</span>
+
+                                    <!-- Swiper -->
+                                    <div class="swiper order-card__slider">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/section_bg-bag3.png" alt="bag"
+                                                    class="order-card__img" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/section_bg-bag4.png" alt="bag"
+                                                    class="order-card__img" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/section_bg-bag3.png" alt="bag"
+                                                    class="order-card__img" />
+                                            </div>
+                                        </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                    </div>
+                                </div>
+                                <p class="order-card__id">№ 123456</p>
+                                <p class="order-card__desc">BLANCA, MOSS</p>
+                                <p class="order-card__price">85 800 ₽</p>
+                            </div>
+                            <div class="order-card">
+                                <div class="order_card_top">
+
+                                    <span class="order-card__status">Завершен</span>
+
+                                    <!-- Swiper -->
+                                    <div class="swiper order-card__slider">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/section_bg-bag4.png" alt="bag"
+                                                    class="order-card__img" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/section_bg-bag3.png" alt="bag"
+                                                    class="order-card__img" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/section_bg-bag3.png" alt="bag"
+                                                    class="order-card__img" />
+                                            </div>
 
 
-                    <div class="orders__content" id="history">
-                        <p class="orders__empty">История заказов пуста</p>
+                                        </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                    </div>
+                                </div>
+                                <p class="order-card__id">№ 123456</p>
+                                <p class="order-card__desc">MOSS</p>
+                                <p class="order-card__price">20 400 ₽</p>
+                            </div>
+                            <div class="order-card">
+                                <div class="order_card_top">
+
+                                    <span class="order-card__status">Завершен</span>
+
+                                    <!-- Swiper -->
+                                    <div class="swiper order-card__slider">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/section_bg-bag4.png" alt="bag"
+                                                    class="order-card__img" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/section_bg-bag3.png" alt="bag"
+                                                    class="order-card__img" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/section_bg-bag3.png" alt="bag"
+                                                    class="order-card__img" />
+                                            </div>
+
+
+                                        </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                    </div>
+                                </div>
+
+                                <p class="order-card__id">№ 123456</p>
+                                <p class="order-card__desc">MOSS</p>
+                                <p class="order-card__price">20 400 ₽</p>
+                            </div>
+                            <div class="order-card">
+                                <div class="order_card_top">
+
+                                    <span class="order-card__status">Завершен</span>
+
+                                    <!-- Swiper -->
+                                    <div class="swiper order-card__slider">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/section_bg-bag4.png" alt="bag"
+                                                    class="order-card__img" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/section_bg-bag3.png" alt="bag"
+                                                    class="order-card__img" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/section_bg-bag3.png" alt="bag"
+                                                    class="order-card__img" />
+                                            </div>
+
+
+                                        </div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                    </div>
+                                </div>
+
+                                <p class="order-card__id">№ 123456</p>
+                                <p class="order-card__desc">MOSS</p>
+                                <p class="order-card__price">20 400 ₽</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
