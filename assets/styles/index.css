@@ -329,7 +329,7 @@
 .profile {
   display: flex;
   margin-bottom: 0;
-  padding-top: 82px;
+  padding-top: 72px;
 }
 @media (max-width: 556px) {
   .profile {
@@ -338,16 +338,29 @@
   }
 }
 .profile__sidebar {
-  width: 348px;
+  max-width: 348px;
   background: #fafafa;
+  width: 100%;
+  flex: 0 0 auto;
 }
 @media (max-width: 768px) {
   .profile__sidebar {
-    width: 290px;
+    max-width: 290px;
+    background: #fafafa;
+    width: 100%;
   }
 }
 @media (max-width: 556px) {
   .profile__sidebar {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.profile__sidebar.active {
+  display: block;
+}
+@media (max-width: 556px) {
+  .profile__sidebar.active {
     width: 100%;
     display: none;
   }
@@ -394,6 +407,20 @@
   background: #fff;
   padding: 4px 12px;
 }
+.profile .sidebar_open {
+  gap: 8px;
+  padding: 8px;
+  display: none;
+}
+@media (max-width: 556px) {
+  .profile .sidebar_open {
+    display: flex;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+}
 .profile__menu {
   list-style: none;
   padding: 0;
@@ -428,6 +455,14 @@
   text-decoration: underline;
   font-size: 12px;
 }
+@media (max-width: 556px) {
+  .profile .profile__content-wrapper {
+    display: none;
+  }
+  .profile .profile__content-wrapper.active {
+    display: block;
+  }
+}
 .profile__content {
   flex: 1;
   background: #fff;
@@ -442,6 +477,7 @@
   .profile__content {
     width: 100%;
     padding: 30px 16px 60px 16px;
+    display: none;
   }
 }
 .profile__content.pasword_content .pasword_desc {

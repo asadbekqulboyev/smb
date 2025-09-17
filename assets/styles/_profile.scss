@@ -1,20 +1,32 @@
 .profile {
   display: flex;
   margin-bottom: 0;
-  padding-top: 82px;
+  padding-top: 72px;
   @media (max-width: 556px) {
     width: 100%;
     flex-direction: column;
   }
   &__sidebar {
-    width: 348px;
+    max-width: 348px;
     background: #fafafa;
+    width: 100%;
+    flex: 0 0 auto;
     @media (max-width: 768px) {
-      width: 290px;
+      max-width: 290px;
+      background: #fafafa;
+      width: 100%;
     }
     @media (max-width: 556px) {
       width: 100%;
-      display: none;
+      max-width: 100%;
+    }
+    &.active {
+      display: block;
+
+      @media (max-width: 556px) {
+        width: 100%;
+        display: none;
+      }
     }
   }
 
@@ -61,7 +73,18 @@
       padding: 4px 12px;
     }
   }
-
+  .sidebar_open {
+    gap: 8px;
+    padding: 8px;
+    display: none;
+    @media (max-width: 556px) {
+      display: flex;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
   &__menu {
     list-style: none;
     padding: 0;
@@ -99,7 +122,14 @@
       }
     }
   }
-
+  .profile__content-wrapper{
+    @media (max-width: 556px) {
+      display: none;
+      &.active{
+        display: block;
+      }
+    }
+  }
   &__content {
     flex: 1;
     background: #fff;
@@ -110,7 +140,9 @@
     @media (max-width: 556px) {
       width: 100%;
       padding: 30px 16px 60px 16px;
+      display: none;
     }
+
     &.pasword_content {
       .pasword_desc {
         margin-bottom: 24px;

@@ -446,6 +446,12 @@ $(document).ready(function () {
     $(this).addClass("active");
     $(".profile__content").hide();
     $($(this).attr("href")).show();
+    $(".profile__content-wrapper").addClass("active");
+    $(".profile__sidebar").addClass("active");
+  });
+  $(".sidebar_open  ").click(function () {
+    $(".profile__content-wrapper").removeClass("active");
+    $(".profile__sidebar").removeClass("active");
   });
   // gift
 
